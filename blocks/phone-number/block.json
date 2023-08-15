@@ -1,0 +1,22 @@
+{
+    "name": "acf/phone-number",
+    "title": "Phone Number (ACF Block)",
+    "description": "Display the site phone number.",
+    "category": "demo-acf-blocks",
+    "icon": "phone",
+    "keywords": ["phone", "telephone"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "template.php"
+    },
+    "supports": {
+        "align": false,
+        "anchor": true,
+        "mode": false
+    },
+    "example": {
+        "attributes": {
+            "demo_acf_phone_number": "555 123-4567"
+        }
+    }
+}
