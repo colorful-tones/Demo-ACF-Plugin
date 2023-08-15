@@ -1,6 +1,6 @@
 # Demo ACF Plugin
 
-Fork it, and kick-start your next build!
+__Fork it, or download the [latest release](releases), and make it your own!__
 
 Need a quick start plugin to kick-start your next WordPress and [ACF PRO](https://advancedcustomfields.com) project? Look no further.
 
