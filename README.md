@@ -1,6 +1,6 @@
 # Demo ACF Plugin
 
-__Fork it, or download the [latest release](releases), and make it your own!__
+__Fork it, or download the [latest release](https://github.com/colorful-tones/Demo-ACF-Plugin/releases), and make it your own!__
 
 Need a quick start plugin to kick-start your next WordPress and [ACF PRO](https://advancedcustomfields.com) project? Look no further.
 
