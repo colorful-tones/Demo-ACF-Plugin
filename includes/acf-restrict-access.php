@@ -24,7 +24,7 @@ add_filter( 'block_editor_settings_all', 'demo_acf_restrict_locking_ui', 10, 2 )
  *
  * @since 0.1.2
  */
-function demo_acf_show_admin() {
+function demo_acf_show_acf_admin() {
 	// If our user can manage site options.
 	if ( current_user_can( 'manage_options' ) ) {
 		$user = wp_get_current_user();

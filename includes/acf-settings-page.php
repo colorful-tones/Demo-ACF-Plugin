@@ -29,11 +29,11 @@ add_action(
 		// Add 'Contact Information' field group with Phone field.
 		acf_add_local_field_group(
 			array(
-				'key'      => 'demo_acf_contact_information',
+				'key'      => 'group_6511a57f5680c',
 				'title'    => 'Contact Information',
 				'fields'   => array(
 					array(
-						'key'           => 'demo_acf_phone_number',
+						'key'           => 'field_6511a57fcbe7e',
 						'label'         => 'Phone Number',
 						'name'          => 'demo_acf_phone_number',
 						'type'          => 'text',
@@ -54,11 +54,11 @@ add_action(
 
 		acf_add_local_field_group(
 			array(
-				'key'      => 'demo_acf_notification_bar',
+				'key'      => 'group_6511a5e8c1c15',
 				'title'    => 'Notification Bar',
 				'fields'   => array(
 					array(
-						'key'        => 'demo_acf_notification_bar_group',
+						'key'        => 'field_6511a5e897814',
 						'label'      => 'Notification Bar',
 						'name'       => 'demo_acf_notification_bar_group',
 						'aria-label' => '',
@@ -66,7 +66,7 @@ add_action(
 						'layout'     => 'row',
 						'sub_fields' => array(
 							array(
-								'key'           => 'demo_acf_notification_onoff',
+								'key'           => 'field_6511a5f597815',
 								'label'         => 'Notification On/Off',
 								'name'          => 'demo_acf_notification_onoff',
 								'type'          => 'true_false',
@@ -77,7 +77,7 @@ add_action(
 								'ui'            => 1,
 							),
 							array(
-								'key'               => 'demo_acf_notification_message',
+								'key'               => 'field_6511a5f597816',
 								'label'             => 'Notification Message',
 								'name'              => 'demo_acf_notification_message',
 								'type'              => 'textarea',

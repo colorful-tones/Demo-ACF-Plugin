@@ -30,6 +30,12 @@ __Required__ You must have [ACF PRO](https://https://www.advancedcustomfields.co
 
 ## Changelog
 
+### 0.1.3 – 2023-09-25
+
+- Restrict access to block locking based on email domain with `demo_acf_show_admin()` check.
+- Improve usage of `get_block_wrapper_attributes()` for Phone block based on [Liam's Tweet thread](https://x.com/lgladdy/status/170011422420935dd).
+- Add `background` and `text` color supports to Phone block.
+
 ### 0.1.2 – 2023-08-29
 
 Added example of restricting access to ACF admin screens based on role && email domain, example: `yourAgency.com`. So builders can limit admin screens for their clients. See: `includes/acf-restrict-access.php`
