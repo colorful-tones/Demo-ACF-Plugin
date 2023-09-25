@@ -7,7 +7,12 @@
 /**
  * @link https://www.advancedcustomfields.com/resources/how-to-hide-acf-menu-from-clients/
  */
-add_filter( 'acf/settings/show_admin', 'demo_acf_show_admin' );
+add_filter( 'acf/settings/show_admin', 'demo_acf_show_acf_admin' );
+/**
+ * Filters the settings to pass to the block editor for all editor type.
+ * @link https://developer.wordpress.org/reference/hooks/block_editor_settings_all/
+ */
+add_filter( 'block_editor_settings_all', 'demo_acf_restrict_locking_ui', 10, 2 );
 
 /**
  * Allow access to ACF screens by WP user role
@@ -43,4 +48,17 @@ function demo_acf_show_admin() {
 			}
 		}
 	}
+}
+
+/**
+ * Restrict access to the locking UI to designated email domains.
+ *
+ * @param array $settings Default editor settings.
+ *
+ * @since 0.1.3
+ */
+function example_theme_restrict_locking_ui( $settings ) {
+	$settings['canLockBlocks'] = demo_acf_show_admin();
+
+	return $settings;
 }
