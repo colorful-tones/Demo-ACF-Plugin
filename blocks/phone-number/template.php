@@ -17,27 +17,15 @@ if ( ! empty( $block['anchor'] ) ) {
 	$block_id = esc_attr( $block['anchor'] );
 }
 
-// Create class attribute allowing for custom "className" and "align" values.
-$class_name = 'demo-acf-phone-number';
-if ( ! empty( $block['className'] ) ) {
-	$class_name .= ' ' . $block['className'];
-}
-
 $phone_number = get_field( 'demo_acf_phone_number', 'options' );
-
 ?>
-<div
-	<?php
-	echo wp_kses_data(
-		get_block_wrapper_attributes(
-			array(
-				'id'    => $block_id,
-				'class' => esc_attr( $class_name ),
-			)
-		)
-	);
-	?>
->
+
+<?php if ( ! $is_preview ) : ?>
+	<div
+		id="<?php echo esc_attr( $block_id ); ?>"
+		<?php echo wp_kses_data( get_block_wrapper_attributes() ); ?>
+	>
+<?php endif; ?>
 
 	<div style="display:flex;align-items:center;gap:5px;">
 		<svg fill="currentColor" height="18" width="18" viewBox="0 0 16 16">
@@ -47,4 +35,6 @@ $phone_number = get_field( 'demo_acf_phone_number', 'options' );
 		<?php echo esc_html( $phone_number ); ?>
 	</div>
 
-</div>
+<?php if ( ! $is_preview ) : ?>
+	</div>
+<?php endif; ?>
