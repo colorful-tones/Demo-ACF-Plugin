@@ -12,7 +12,11 @@
     "supports": {
         "align": false,
         "anchor": true,
-        "mode": false
+        "mode": false,
+        "color": {
+            "text": true,
+            "background": true
+        }
     },
     "example": {
         "attributes": {
