@@ -7,7 +7,7 @@
 
 add_action(
 	'acf/init',
-	function() {
+	function () {
 		// Add the top-level page.
 		acf_add_options_page(
 			array(

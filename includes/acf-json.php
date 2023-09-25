@@ -95,13 +95,12 @@ function demo_acf_json_save_path_for_option_pages() {
  *
  * @param string $filename  The default filename.
  * @param array  $post      The main post array for the item being saved.
- * @param string $load_path The path that the item was loaded from.
  *
  * @return string $filename
  *
  * @since  0.1.1
  */
-function demo_acf_json_filename( $filename, $post, $load_path ) {
+function demo_acf_json_filename( $filename, $post ) {
 	$filename = str_replace(
 		array(
 			' ',
