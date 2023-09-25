@@ -15,12 +15,11 @@ add_filter( 'acf/settings/show_admin', 'demo_acf_show_admin' );
  *
  * @link https://developer.wordpress.org/reference/functions/current_user_can/
  *
- * @param boolean $show Whether to show the ACF admin.
  * @return boolean $show Whether to show the ACF admin.
  *
  * @since 0.1.2
  */
-function demo_acf_show_admin( $show ) {
+function demo_acf_show_admin() {
 	// If our user can manage site options.
 	if ( current_user_can( 'manage_options' ) ) {
 		$user = wp_get_current_user();
@@ -34,7 +33,9 @@ function demo_acf_show_admin( $show ) {
 		// Make sure we have a WP_User object and email address.
 		if ( $user && isset( $user->user_email ) ) {
 			// Trim user email to domain only.
-			$email_domain = strtolower( array_pop( explode( '@', trim( $user->user_email ) ) ) );
+			$email_domain = trim( $user->user_email );
+			$email_domain = explode( '@', $email_domain );
+			$email_domain = strtolower( array_pop( $email_domain ) );
 
 			// Compare current logged in user's email with our allow list.
 			if ( in_array( $email_domain, $allowed_email_domains, true ) ) {

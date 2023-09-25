@@ -15,7 +15,7 @@
 
 // Define our handy constants.
 define( 'DEMO_ACF_VERSION', '0.1.2' );
-define( 'DEMO_ACF_PLUGIN_DIR', dirname( __FILE__ ) );
+define( 'DEMO_ACF_PLUGIN_DIR', __DIR__ );
 define( 'DEMO_ACF_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'DEMO_ACF_PLUGIN_BLOCKS', DEMO_ACF_PLUGIN_DIR . '/blocks/' );
 
