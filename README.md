@@ -30,6 +30,10 @@ __Required__ You must have [ACF PRO](https://https://www.advancedcustomfields.co
 
 ## Changelog
 
+### 0.1.4 – 2023-10-20
+
+- Fixed Fatal Error for misnamed function call in `includes/acf-restrict-access.php` 🤦‍♂️
+
 ### 0.1.3 – 2023-09-25
 
 - Restrict access to block locking based on email domain with `demo_acf_show_admin()` check.
