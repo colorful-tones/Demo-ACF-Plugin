@@ -10,6 +10,7 @@
 add_filter( 'acf/settings/show_admin', 'demo_acf_show_acf_admin' );
 /**
  * Filters the settings to pass to the block editor for all editor type.
+ *
  * @link https://developer.wordpress.org/reference/hooks/block_editor_settings_all/
  */
 add_filter( 'block_editor_settings_all', 'demo_acf_restrict_locking_ui', 10, 2 );
@@ -33,6 +34,7 @@ function demo_acf_show_acf_admin() {
 		$allowed_email_domains = array(
 			'advancedcustomfields.com',
 			'wpengine.com',
+			'wpengine.local',
 		);
 
 		// Make sure we have a WP_User object and email address.
@@ -57,8 +59,8 @@ function demo_acf_show_acf_admin() {
  *
  * @since 0.1.3
  */
-function example_theme_restrict_locking_ui( $settings ) {
-	$settings['canLockBlocks'] = demo_acf_show_admin();
+function demo_acf_restrict_locking_ui( $settings ) {
+	$settings['canLockBlocks'] = demo_acf_show_acf_admin();
 
 	return $settings;
 }
