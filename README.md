@@ -30,7 +30,7 @@ __Required__ You must have [ACF PRO](https://https://www.advancedcustomfields.co
 
 ## Changelog
 
-## 0.1.5 – 2023-12-14
+### 0.1.5 – 2023-12-14
 
 - Wrap "Site Settings" Options page in `function_exists()` check to fail gracefully if ACF PRO is not installed.
 
