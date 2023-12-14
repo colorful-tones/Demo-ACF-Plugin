@@ -30,6 +30,10 @@ __Required__ You must have [ACF PRO](https://https://www.advancedcustomfields.co
 
 ## Changelog
 
+## 0.1.5 – 2023-12-14
+
+- Wrap "Site Settings" Options page in `function_exists()` check to fail gracefully if ACF PRO is not installed.
+
 ### 0.1.4 – 2023-10-20
 
 - Fixed Fatal Error for misnamed function call in `includes/acf-restrict-access.php` 🤦‍♂️
@@ -43,6 +47,7 @@ __Required__ You must have [ACF PRO](https://https://www.advancedcustomfields.co
 ### 0.1.2 – 2023-08-29
 
 Added example of restricting access to ACF admin screens based on role && email domain, example: `yourAgency.com`. So builders can limit admin screens for their clients. See: `includes/acf-restrict-access.php`
+
 ### 0.1.1 – 2023-08-15
 
 Initial release, which includes:
